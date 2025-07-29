@@ -23,10 +23,10 @@
   background-color: #555;
   color: #fff;
   padding: 12px 35px;
-  color: #fff;
   border-radius: 8px;
   text-decoration: none;
   font-size: 0.8rem;
+  transition: background 0.3s;
 }
 
 #menu a:hover {
@@ -46,14 +46,14 @@
 .layout01 .cabecalho {
   padding: 20px;
   text-align: left;
-  background-color: #1210b4;
+  background-color: red;
   color: white;
 }
 
 .layout01 .rodape {
   padding: 20px;
   text-align: left;
-  background-color: #2613cf; 
+  background-color: red; 
   color: white;
 }
 
@@ -88,23 +88,34 @@
 
 .tabuleiro {
   display: grid;
-  grid-template-columns: repeat(5, 60px);
-  grid-template-rows: repeat(5, 60px);
-  gap: 0;
+  grid-template-columns: repeat(8, 40px);
+  grid-template-rows: repeat(8, 40px);
+  width: 320px;
+  height: 320px;
 }
 
 .bloco {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 
-.bloco:nth-child(odd) {
-  background-color: #000;
+/* Padrão preto */
+.bloco {
+  background-color: black;
 }
 
-.bloco:nth-child(even) {
-  background-color: #fff;
+/* Regras para deixar em xadrez */
+.bloco:nth-child(odd):nth-child(-n + 8),
+.bloco:nth-child(even):nth-child(n + 9):nth-child(-n + 16),
+.bloco:nth-child(odd):nth-child(n + 17):nth-child(-n + 24),
+.bloco:nth-child(even):nth-child(n + 25):nth-child(-n + 32),
+.bloco:nth-child(odd):nth-child(n + 33):nth-child(-n + 40),
+.bloco:nth-child(even):nth-child(n + 41):nth-child(-n + 48),
+.bloco:nth-child(odd):nth-child(n + 49):nth-child(-n + 56),
+.bloco:nth-child(even):nth-child(n + 57):nth-child(-n + 64) {
+  background-color: white;
 }
+
 
 .layout03 {
   display: flex;
@@ -117,14 +128,14 @@
   padding: 20px;
   font-weight: bold;
   color: white;
-  background-color: #2a1ed8;
+  background-color: green;
 }
 
 .layout03 .footer {
   padding: 20px;
   font-weight: bold;
   color: white;
-  background-color: #101bbb;
+  background-color: green;
 }
 
 .layout03 .conteudo {
