@@ -35,3 +35,127 @@
 
 /* NÃO ALTERE DAQUI PRA CIMA */
 /* ESCREVA SEU CÓDIGO ABAIXO */
+
+.layout01 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.layout01 .cabecalho {
+  padding: 20px;
+  text-align: left;
+  background-color: #1210b4;
+  color: white;
+}
+
+.layout01 .rodape {
+  padding: 20px;
+  text-align: left;
+  background-color: #2613cf; 
+  color: white;
+}
+
+.layout01 .meio {
+  display: flex;
+  gap: 10px;
+}
+
+.layout01 .coluna-artigos {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  gap: 10px;
+}
+
+.layout01 .artigo {
+  padding: 20px;
+  background-color: #ecf0f1; 
+}
+
+.layout01 .menu-lateral {
+  padding: 20px;
+  background-color: #ecf0f1; 
+  flex: 1;
+}
+
+.layout02 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(5, 60px);
+  gap: 0;
+}
+
+.bloco {
+  width: 60px;
+  height: 60px;
+}
+
+.bloco:nth-child(odd) {
+  background-color: #000;
+}
+
+.bloco:nth-child(even) {
+  background-color: #fff;
+}
+
+.layout03 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.layout03 .header {
+  padding: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #2a1ed8;
+}
+
+.layout03 .footer {
+  padding: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #101bbb;
+}
+
+.layout03 .conteudo {
+  display: flex;
+  gap: 10px;
+}
+
+.layout03 .menu {
+  padding: 20px;
+  flex: 1;
+  background-color: #ecf0f1; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.layout03 .menu button {
+  background: #bdc3c7;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.layout03 .main {
+  padding: 20px;
+  flex: 3;
+  background-color: #ecf0f1; 
+}
+
+.layout03 .ads {
+  padding: 20px;
+  flex: 1;
+  background-color: #ecf0f1;
+}
